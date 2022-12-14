@@ -1,0 +1,64 @@
+.outer {
+  align-content: center;
+}
+.title {
+  align-content: center;
+  text-align: center;
+}
+.box {
+  width: 40%;
+  margin: auto;
+  margin-top: 5rem;
+  padding: 10px;
+  align-content: center;
+}
+.quadraticbody {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+.quadraticbody input {
+  width: 70px;
+  height: 21px;
+}
+.quadraticbody p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.outputdiv {
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outputdiv button {
+  cursor: pointer;
+  border: none;
+  width: 8rem;
+  padding: 7px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.557);
+}
+.outputdiv button:hover {
+  /* background-color: rgb(62, 207, 62); */
+  background-color: black;
+  color: aliceblue;
+}
+.outputdiv textarea {
+  min-width: 50%;
+  min-height: 10rem;
+  max-width: 50%;
+  max-height: 10rem;
+  margin: 20px;
+  border-radius: 21px;
+  resize: none;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-weight: bolder;
+}

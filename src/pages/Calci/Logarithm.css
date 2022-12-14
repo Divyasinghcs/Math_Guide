@@ -1,0 +1,79 @@
+.outerr {
+  align-content: center;
+  text-align: center;
+  margin: 0%;
+  background-color: rgb(149, 204, 253);
+  height: 100vh;
+}
+.titlee {
+  padding: 10px;
+  margin: 0%;
+  background-color: rgb(232, 239, 245);
+}
+.titlee h2 {
+  margin: 0%;
+  /* padding: 8px; */
+  font-family: cursive;
+  font-size: 200px;
+}
+.card {
+  width: 40%;
+  margin: auto;
+  margin-top: 10%;
+  background-image: linear-gradient(
+    90deg,
+    rgb(127, 6, 214),
+    rgb(113, 90, 203),
+    rgba(128, 113, 241, 0.778)
+  );
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px black;
+}
+.inners {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.inners p {
+  font-size: 50px;
+  margin-top: 0%;
+  padding-left: 20px;
+  color: aliceblue;
+}
+
+.inners input {
+  width: 50px;
+  height: 20px;
+  outline: none;
+  margin-top: 0%;
+  font-weight: bold;
+  margin: 5px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  color: rgb(16, 16, 16);
+  background-color: antiquewhite;
+}
+.input input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.answer {
+  border: none;
+  background-color: rgb(241, 245, 240);
+  color: rgb(2, 1, 1);
+  font-size: 14px;
+  padding: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px black;
+}
+
+.answer:hover {
+  background-color: black;
+  color: aliceblue;
+}
