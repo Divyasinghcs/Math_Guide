@@ -1,72 +1,77 @@
-import { useState } from 'react'
-import './Calculator.css'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Calculator.css";
+import { AiFillHome } from "react-icons/ai";
 function Calculator(props) {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState("");
   const zeroClicked = () => {
-    setInputValue(inputValue + '0')
-  }
+    setInputValue(inputValue + "0");
+  };
   const oneClicked = () => {
-    setInputValue(inputValue + '1')
-  }
+    setInputValue(inputValue + "1");
+  };
   const twoClicked = () => {
-    setInputValue(inputValue + '2')
-  }
+    setInputValue(inputValue + "2");
+  };
   const threeClicked = () => {
-    setInputValue(inputValue + '3')
-  }
+    setInputValue(inputValue + "3");
+  };
   const fourClicked = () => {
-    setInputValue(inputValue + '4')
-  }
+    setInputValue(inputValue + "4");
+  };
   const fiveClicked = () => {
-    setInputValue(inputValue + '5')
-  }
+    setInputValue(inputValue + "5");
+  };
   const sixClicked = () => {
-    setInputValue(inputValue + '6')
-  }
+    setInputValue(inputValue + "6");
+  };
   const sevenClicked = () => {
-    setInputValue(inputValue + '7')
-  }
+    setInputValue(inputValue + "7");
+  };
   const eightClicked = () => {
-    setInputValue(inputValue + '8')
-  }
+    setInputValue(inputValue + "8");
+  };
   const nineClicked = () => {
-    setInputValue(inputValue + '9')
-  }
+    setInputValue(inputValue + "9");
+  };
   const plusClicked = () => {
-    setInputValue(inputValue + '+')
-  }
+    setInputValue(inputValue + "+");
+  };
   const minusClicked = () => {
-    setInputValue(inputValue + '-')
-  }
+    setInputValue(inputValue + "-");
+  };
   const multiClicked = () => {
-    setInputValue(inputValue + '*')
-  }
+    setInputValue(inputValue + "*");
+  };
   const divideClicked = () => {
-    setInputValue(inputValue + '/')
-  }
+    setInputValue(inputValue + "/");
+  };
   function allClear() {
-    setInputValue('')
+    setInputValue("");
   }
   function back() {
-    let size = inputValue.length
+    let size = inputValue.length;
     if (size > 0) {
-      let str = inputValue.substring(0, size - 1)
-      console.log(str)
-      setInputValue(str)
+      let str = inputValue.substring(0, size - 1);
+      console.log(str);
+      setInputValue(str);
     }
   }
   function onSub() {
     try {
-      let str = eval(inputValue)
-      setInputValue(str)
+      let str = eval(inputValue);
+      setInputValue(str);
     } catch (e) {
-      setInputValue('Syntax Error')
+      setInputValue("Syntax Error");
     }
   }
   return (
     <>
       <div className="out">
         <div className="name">
+          <Link to="/" className="homeicon">
+            <AiFillHome></AiFillHome>
+          </Link>
           <h2>Calculator</h2>
         </div>
         <div className="inner">
@@ -84,9 +89,9 @@ function Calculator(props) {
                 <button
                   className="digit"
                   style={{
-                    backgroundColor: '#c17ef7',
-                    fontSize: '23px',
-                    borderRadius: '50%',
+                    backgroundColor: "#a305f2",
+                    fontSize: "23px",
+                    borderRadius: "50%",
                   }}
                   onClick={plusClicked}
                 >
@@ -117,9 +122,9 @@ function Calculator(props) {
                   className="digit"
                   onClick={minusClicked}
                   style={{
-                    backgroundColor: '#c17ef7',
-                    fontSize: '23px',
-                    borderRadius: '50%',
+                    backgroundColor: "#a305f2",
+                    fontSize: "23px",
+                    borderRadius: "50%",
                   }}
                 >
                   -
@@ -147,9 +152,9 @@ function Calculator(props) {
                   className="digit"
                   onClick={multiClicked}
                   style={{
-                    backgroundColor: '#c17ef7',
-                    fontSize: '23px',
-                    borderRadius: '50%',
+                    backgroundColor: "#a305f2",
+                    fontSize: "23px",
+                    borderRadius: "50%",
                   }}
                 >
                   *
@@ -177,9 +182,9 @@ function Calculator(props) {
                   className="digit"
                   onClick={divideClicked}
                   style={{
-                    backgroundColor: '#c17ef7',
-                    fontSize: '23px',
-                    borderRadius: '50%',
+                    backgroundColor: "#a305f2",
+                    fontSize: "23px",
+                    borderRadius: "50%",
                   }}
                 >
                   /
@@ -189,7 +194,7 @@ function Calculator(props) {
                 <button
                   className="digit"
                   onClick={allClear}
-                  style={{ backgroundColor: '#f24e30' }}
+                  style={{ backgroundColor: "#f20509" }}
                 >
                   AC
                 </button>
@@ -198,9 +203,9 @@ function Calculator(props) {
                 <button
                   className="digit"
                   onClick={back}
-                  style={{ backgroundColor: '#f24e30' }}
+                  style={{ backgroundColor: "#f20509" }}
                 >
-                  {'<-'}
+                  {"<-"}
                 </button>
               </th>
               <th>
@@ -213,6 +218,6 @@ function Calculator(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
-export default Calculator
+export default Calculator;

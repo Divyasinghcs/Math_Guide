@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./TemperatureConverter.css";
+import { Link } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 function TemperatureConverter(props) {
   const [inputValue, setInputValue] = useState("");
   const [selectFromFh, setFromFh] = useState(false);
@@ -9,6 +11,7 @@ function TemperatureConverter(props) {
   const [selectToC, setToC] = useState(false);
   const [selectToK, setToK] = useState(false);
 
+  const [symbol, setSymbol] = useState("");
   function onInputChange(event) {
     setInputValue(event.target.value);
   }
@@ -18,6 +21,7 @@ function TemperatureConverter(props) {
     setFromFh(true);
     setFromK(true);
     setToC(true);
+    setSymbol("\u00B0 C");
   }
 
   function fromFahrenheitClicked() {
@@ -25,27 +29,32 @@ function TemperatureConverter(props) {
     setFromC(true);
     setFromK(true);
     setToFh(true);
+    setSymbol("\u00B0 F");
   }
   function fromKelvinClicked() {
     setFromFh(true);
     setFromC(true);
     setFromK(false);
     setToK(true);
+    setSymbol("K");
   }
   function toCelciusClicked() {
     setToC(false);
     setToFh(true);
     setToK(true);
+    // setSymbol("\u00B0 C");
   }
   function toFahrenheitClicked() {
     setToC(true);
     setToFh(false);
     setToK(true);
+    // setSymbol("\u00B0 F");
   }
   function toKelvinClicked() {
     setToC(true);
     setToFh(true);
     setToK(false);
+    // setSymbol("\u00B0 K");
   }
   function resetClicked() {
     setInputValue("");
@@ -55,6 +64,7 @@ function TemperatureConverter(props) {
     setToC(false);
     setToFh(false);
     setToK(false);
+    setSymbol("");
   }
   function cToF(number) {
     let num = number * 1.8 + 32;
@@ -82,17 +92,23 @@ function TemperatureConverter(props) {
   }
   function onClickConvert() {
     if (!selectFromC && !selectToFh) {
-      setInputValue(cToF(inputValue));
+      // setInputValue(cToF(inputValue));
+      setSymbol(cToF(inputValue) + "\u00B0 F");
     } else if (!selectFromC && !selectToK) {
-      setInputValue(cToK(inputValue));
+      // setInputValue(cToK(inputValue));
+      setSymbol(cToK(inputValue) + "\u00B0 K");
     } else if (!selectFromFh && !selectToC) {
-      setInputValue(fToC(inputValue));
+      // setInputValue(fToC(inputValue));
+      setSymbol(fToC(inputValue) + "\u00B0 C");
     } else if (!selectFromFh && !selectFromK) {
-      setInputValue(fToK(inputValue));
+      // setInputValue(fToK(inputValue));
+      setSymbol(fToK(inputValue) + "\u00B0 K");
     } else if (!selectFromK && !selectToC) {
-      setInputValue(kToC(inputValue));
+      // setInputValue(kToC(inputValue));
+      setSymbol(kToC(inputValue) + "\u00B0 C");
     } else if (!selectFromK && !selectFromFh) {
-      setInputValue(kToF(inputValue));
+      // setInputValue(kToF(inputValue));
+      setSymbol(kToF(inputValue) + "\u00B0 F");
     } else {
       setInputValue("");
       alert("choose properly");
@@ -101,14 +117,21 @@ function TemperatureConverter(props) {
   return (
     <div className="outer">
       <div className="name">
+        <Link to="/" className="homeicon">
+          <AiFillHome></AiFillHome>
+        </Link>
         <h3>Temperature Converter</h3>
       </div>
-      <div className="inner">
-        <input
-          type="number"
-          value={inputValue}
-          onChange={onInputChange}
-        ></input>
+      <div className="innert">
+        <div className="tempinput">
+          <input
+            type="number"
+            value={inputValue}
+            onChange={onInputChange}
+            placeholder="Temperature"
+          ></input>
+          <p>{symbol}</p>
+        </div>
         <button className="reset" onClick={resetClicked}>
           Reset
         </button>

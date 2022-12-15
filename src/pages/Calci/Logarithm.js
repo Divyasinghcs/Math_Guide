@@ -1,5 +1,7 @@
 import "./Logarithm.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 function Logarithm(props) {
   const [basevalue, setbaseValue] = useState("");
   const [numbervalue, setnummberValue] = useState("");
@@ -23,6 +25,9 @@ function Logarithm(props) {
     <>
       <div className="outerr">
         <div className="titlee">
+          <Link to="/" className="homeicon">
+            <AiFillHome></AiFillHome>
+          </Link>
           <h2>Logarithm</h2>
         </div>
         <div className="card">
@@ -30,10 +35,18 @@ function Logarithm(props) {
             <p>
               log
               <sub>
-                <input type="number" onChange={onBaseClicked} />
+                <input
+                  type="number"
+                  onChange={onBaseClicked}
+                  placeholder="Base"
+                />
               </sub>
-              <input type="number" onChange={onNumberClicked}></input>=
-              <input type="text" disabled value={answer}></input>
+              <input
+                type="number"
+                onChange={onNumberClicked}
+                placeholder="Value"
+              ></input>
+              =<input type="text" disabled value={answer}></input>
             </p>
           </div>
           <div className="button" onClick={submitHandler}>

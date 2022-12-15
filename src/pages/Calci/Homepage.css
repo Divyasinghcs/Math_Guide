@@ -2,10 +2,23 @@
   margin: 0px;
   padding: 0px;
   width: 100%;
+  /* background-image: linear-gradient(
+    0deg,
+    rgb(235, 81, 202),
+    rgb(236, 131, 235),
+    rgb(237, 185, 244)
+  ); */
+  background-color: rgb(251, 251, 251);
 }
 .links {
   text-decoration: none;
   color: black;
+}
+.mtitle h2 {
+  text-align: center;
+  margin: 0px;
+  padding: 15px 0px 15px 0px;
+  font-size: 30px;
 }
 
 /* .titles {
@@ -21,37 +34,45 @@
   padding: 5px;
   text-align: center;
 } */
-.tiles h2 {
+.centered {
   margin: 0px;
   font-size: 30px;
   color: rgb(255, 253, 250);
   z-index: 5;
+  position: absolute;
 }
 .tiles {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     0deg,
-    rgb(194, 99, 232),
-    rgb(183, 104, 182),
+    rgb(235, 81, 202),
+    rgb(236, 131, 235),
     rgb(237, 185, 244)
-  );
+  ); */
+  background-color: aliceblue;
   margin: auto;
   margin: 20px;
   min-width: 15rem;
   text-align: center;
   height: 13rem;
+  position: relative;
   /* display: flex; */
 }
+.tiles:hover {
+  outline: 5px solid darkblue;
+}
+
 .tiles img {
   z-index: 1;
   min-width: 15rem;
   height: 13rem;
+  border-radius: 10px;
 }
 .icons {
   text-align: center;
   padding: 10px;
 }
 .body {
-  background-color: black;
+  background-color: rgb(64, 153, 159);
   display: flex;
   flex-direction: row;
   padding: 50px;

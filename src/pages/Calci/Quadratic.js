@@ -1,6 +1,8 @@
 import "./Quadratic.css";
 import Card from "../../util/Card";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 function Quadratic(props) {
   const [aInputValue, setAValue] = useState("");
   const [bInputValue, setBValue] = useState("");
@@ -62,17 +64,20 @@ function Quadratic(props) {
     <>
       <div className="outer">
         <div className="title">
+          <Link to="/" className="homeicon">
+            <AiFillHome></AiFillHome>
+          </Link>
           <h2>Quadratic Equation Solver</h2>
         </div>
         <Card className="box">
           <div className="quadraticbody">
-            <input type="number" onChange={onAchangeHandler} />
+            <input type="number" onChange={onAchangeHandler} placeholder="A" />
             <p>
               x<sup>2</sup>+
             </p>
-            <input type="number" onChange={onBchangeHandler} />
+            <input type="number" onChange={onBchangeHandler} placeholder="B" />
             <p>x+</p>
-            <input type="number" onChange={onCchangeHandler} />
+            <input type="number" onChange={onCchangeHandler} placeholder="C" />
             <p>= 0</p>
           </div>
           <div className="outputdiv">
