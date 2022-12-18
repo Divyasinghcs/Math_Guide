@@ -5,6 +5,7 @@ import TemperatureConverter from "./pages/Calci/TemperatureConverter";
 import Quadratic from "./pages/Calci/Quadratic";
 import { Routes, Route } from "react-router-dom";
 import Logarithm from "./pages/Calci/Logarithm";
+import HcfLcm from "./pages/Calci/HcfLcm";
 function App(props) {
   return (
     <>
@@ -17,6 +18,7 @@ function App(props) {
         <Route path="/temperature" element={<TemperatureConverter />} />
         <Route path="/quadratic" element={<Quadratic />} />
         <Route path="/logarithm" element={<Logarithm />} />
+        <Route path="/hcflcm" element={<HcfLcm />} />
       </Routes>
     </>
   );

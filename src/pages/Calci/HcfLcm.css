@@ -1,0 +1,60 @@
+.mainbody {
+  background-color: grey;
+  height: 100vh;
+}
+
+.lcmtitle {
+  display: flex;
+  background-color: aliceblue;
+}
+.lcmtitle p {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 30%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+.hcfbody {
+  width: 40%;
+  height: 25%;
+  text-align: center;
+  background-color: antiquewhite;
+  margin: 0px auto;
+  margin-top: 40px;
+}
+
+.hcfcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hcfbody h2 {
+  color: rgb(67, 3, 64);
+  padding: 10px;
+}
+.hcfcontent input {
+  height: 25px;
+  margin: 8px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.hcfcontent p {
+  margin: 5px;
+  font-size: 30px;
+}
+.submitbutton {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 5px 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.submitbutton:hover {
+  background-color: black;
+  color: white;
+}

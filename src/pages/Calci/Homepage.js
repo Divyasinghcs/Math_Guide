@@ -6,6 +6,8 @@ import calc from "../../resource/calc.png";
 import temp from "../../resource/temp.png";
 import qesolver from "../../resource/qesolver.png";
 import log from "../../resource/log.png";
+import hcflcm from "../../resource/hcflcm.png";
+import HcfLcm from "./HcfLcm";
 function Homepage(props) {
   return (
     <>
@@ -54,14 +56,16 @@ function Homepage(props) {
                 <Link to="/logarithm" className="links">
                   <Card className="tiles">
                     {/* <h2>Logarithm</h2> */}
-                    <img src={log} alt="logat=rithm" />
+                    <img src={log} alt="logatrithm" />
                   </Card>
                 </Link>
               </th>
               <th>
-                <Card className="tiles">
-                  <h2> Calculator </h2>
-                </Card>
+                <Link to="/hcflcm" className="links">
+                  <Card className="tiles">
+                    <img src={hcflcm} alt="hcflcm" />
+                  </Card>
+                </Link>
               </th>
             </tr>
           </table>
